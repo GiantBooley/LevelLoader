@@ -1,0 +1,7 @@
+ManifestFileVersion: 0
+CRC: 1078475672
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: levelloaderui.assets
+      Dependencies: {}

@@ -1,0 +1,6 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/LevelLoader.csproj" />
+    <Project Path="src/LevelLoaderClasses.csproj" />
+  </Folder>
+</Solution>
