@@ -15,7 +15,7 @@ using System.Security.Cryptography;
 using System.Reflection;
 using I2.Loc;
 using HarmonyLib;
-using FPModLoader;
+using FlourModLoader;
 
 namespace LevelLoader {
 
@@ -37,14 +37,14 @@ namespace LevelLoader {
 	};
 
 
-	[BepInPlugin("goi.flowerpot.levelloader", "Level Loader", "0.1.0")]
+	[BepInPlugin("org.flour.levelloader", "Level Loader", "0.1.0")]
 	[BepInProcess("GettingOverIt.exe")]
-	[BepInDependency("goi.flowerpot.fpmodloader")]
-	public class LevelLoaderPlugin : FPMod {
+	[BepInDependency("org.flour.flourmodloader")]
+	public class LevelLoaderPlugin : FlourMod {
 		internal static new ManualLogSource Logger;
 		public static LevelLoaderPlugin Instance;
 
-		public override string author => "Flower Pot";
+		public override string author => "Flour";
 		public override string description => "Level loader for loading bundle maps";
 
 		// config
@@ -110,7 +110,7 @@ namespace LevelLoader {
 			_templateLevelCardPrefab = _levelLoaderUIBundle.LoadAsset<GameObject>("TemplateLevelCard.prefab");
 			_templateLevelListItemPrefab = _levelLoaderUIBundle.LoadAsset<GameObject>("TemplateLevelListItem.prefab");
 
-			FPModLoaderPlugin.Instance.RegisterMod(this);
+			FlourModLoaderPlugin.Instance.RegisterMod(this);
 		}
 		public override void OnGameStateChange(GameState oldState, GameState newState, Scene scene) {
 			switch (newState) {
@@ -339,7 +339,7 @@ namespace LevelLoader {
 			onLoaded = (Scene scene, LoadSceneMode loadSceneMode) => {
 				if (SceneManager.GetSceneByName(dummySceneName).isLoaded && SceneManager.GetSceneByName(sceneName).isLoaded) {
 					SceneManager.sceneLoaded -= onLoaded;
-					FPModLoaderPlugin.Instance.ChangeGameState(GameState.InGame, SceneManager.GetSceneByName(sceneName));
+					FlourModLoaderPlugin.Instance.ChangeGameState(GameState.InGame, SceneManager.GetSceneByName(sceneName));
 					isSwitchingScene = false;
 				}
 			};
