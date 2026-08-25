@@ -303,7 +303,7 @@ public static class LevelLoaderPatches
 			var resolvedCtor = typeof(System.SerializableAttribute).GetConstructor(
 				System.Reflection.BindingFlags.Default | System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.Public,
 				null,
-				System.Array.Empty<System.Type>(),
+				new System.Type[0],
 				null
 			);
 			var AttractorsSerializableAttribute = new CustomAttribute(

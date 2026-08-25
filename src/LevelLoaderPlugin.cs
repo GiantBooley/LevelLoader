@@ -44,8 +44,8 @@ namespace LevelLoader {
 		internal static new ManualLogSource Logger;
 		public static LevelLoaderPlugin Instance;
 
-		public override string author => "Flour";
-		public override string description => "Level loader for loading bundle maps";
+		public override string Author => "Flour";
+		public override string Description => "Level loader for loading bundle maps";
 
 		// config
 		private ConfigEntry<string> config_selectedLevel;
@@ -109,8 +109,6 @@ namespace LevelLoader {
 			_levelLoaderPanelPrefab = _levelLoaderUIBundle.LoadAsset<GameObject>("LevelLoader.prefab");
 			_templateLevelCardPrefab = _levelLoaderUIBundle.LoadAsset<GameObject>("TemplateLevelCard.prefab");
 			_templateLevelListItemPrefab = _levelLoaderUIBundle.LoadAsset<GameObject>("TemplateLevelListItem.prefab");
-
-			FlourModLoaderPlugin.Instance.RegisterMod(this);
 		}
 		public override void OnGameStateChange(GameState oldState, GameState newState, Scene scene) {
 			switch (newState) {

@@ -1,6 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
-		<TargetFramework>net46</TargetFramework>
+		<TargetFramework>netstandard2.0</TargetFramework>
 		<AssemblyName>LevelLoader</AssemblyName>
 		<Product>Mod for loading asset bundle custom maps</Product>
 		<Version>0.1.0</Version>
@@ -31,40 +31,31 @@
 			<Private>false</Private>
 		</ProjectReference>
 	</ItemGroup>
+	
+	<ItemGroup>
+		<Reference Include="UnityEngine.UI">
+			<HintPath>lib/UnityEngine.UI.dll</HintPath>
+			<Private>false</Private>
+		</Reference>
+		<Reference Include="Unity.TextMeshPro">
+			<HintPath>lib/Unity.TextMeshPro.dll</HintPath>
+			<Private>false</Private>
+		</Reference>
+		<Reference Include="Rewired">
+			<HintPath>lib/Rewired_Core.dll</HintPath>
+			<Private>false</Private>
+		</Reference>
+		<Reference Include="Assembly-CSharp">
+			<HintPath>lib/Assembly-CSharp.dll</HintPath>
+			<Private>false</Private>
+		</Reference>
+		<Reference Include="Unity.Postprocessing.Runtime">
+			<HintPath>lib/Unity.Postprocessing.Runtime.dll</HintPath>
+			<Private>false</Private>
+		</Reference>
+	</ItemGroup>
 
 	<ItemGroup Condition="'$(TargetFramework.TrimEnd(`0123456789`))' == 'net'">
 		<PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.2" PrivateAssets="all" />
 	</ItemGroup>
-	
-	<ItemGroup>
-		<Reference Include="netstandard">
-			<HintPath>$(GOI_LIB_PATH)/netstandard.dll</HintPath>
-			<Private>false</Private>
-		</Reference>
-		<Reference Include="UnityEngine.UI">
-			<HintPath>$(GOI_LIB_PATH)/UnityEngine.UI.dll</HintPath>
-			<Private>false</Private>
-		</Reference>
-		<Reference Include="Unity.TextMeshPro">
-			<HintPath>$(GOI_LIB_PATH)/Unity.TextMeshPro.dll</HintPath>
-			<Private>false</Private>
-		</Reference>
-		<Reference Include="UnityEngine.LocalizationModule">
-			<HintPath>$(GOI_LIB_PATH)/UnityEngine.LocalizationModule.dll</HintPath>
-			<Private>false</Private>
-		</Reference>
-		<Reference Include="Rewired">
-			<HintPath>$(GOI_LIB_PATH)/Rewired_Core.dll</HintPath>
-			<Private>false</Private>
-		</Reference>
-		<Reference Include="Assembly-CSharp">
-			<HintPath>$(GOI_LIB_PATH)/Assembly-CSharp.dll</HintPath>
-			<Private>false</Private>
-		</Reference>
-		<Reference Include="Unity.Postprocessing.Runtime">
-			<HintPath>$(GOI_LIB_PATH)/Unity.Postprocessing.Runtime.dll</HintPath>
-			<Private>false</Private>
-		</Reference>
-	</ItemGroup>
-
 </Project>

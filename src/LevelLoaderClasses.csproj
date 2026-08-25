@@ -1,6 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
-		<TargetFramework>net46</TargetFramework>
+		<TargetFramework>netstandard2.0</TargetFramework>
 		<AssemblyName>LevelLoaderClasses</AssemblyName>
 		<Product>Cecil classes for level loader</Product>
 		<Version>0.1.0</Version>
