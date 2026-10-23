@@ -17,6 +17,9 @@
 
 	<ItemGroup>
 		<Compile Include="LevelLoaderPlugin.cs" />
+		<Compile Include="HarmonyPatches.cs" />
+		<Compile Include="LevelLoaderScriptHarmonyPatches.cs" />
+		<Compile Include="Saviour.cs" />
 	</ItemGroup>
 
 	<ItemGroup>

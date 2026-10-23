@@ -1,0 +1,34 @@
+mdata settings:
+# map info
+credit           : map author
+description      : description
+
+# game
+scene            : starting scene name
+mode             : replace if r
+lighting         : use map lighting settings if r
+fog              : "Changes the fog color ex- fog=#00000000"
+
+# camera
+sky              : delete default sky if r
+cam              : perspective main camera if 1
+zplane           : z position of main camera
+farplane         : main camera far plane
+bgfarplane       : bg camera far plane
+
+# dio
+shadow           : disable hammer shadow if >0
+hammermat        : "Prevents the hammer from rendering on top of everything if set greater than 0"
+
+
+
+
+
+
+To do:
+fix GravityControlLite+Attractors
+finish txt file parser (zplane, shadow, fog, hammermat)
+add continue
+fix "PlayOneShot played with null audio clip"
+make right side thumbnail camera thing
+add dio and camera replacement
